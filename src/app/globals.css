@@ -340,8 +340,13 @@ a {
   width: fit-content;
 }
 
-.clear-filters-btn:hover {
+.clear-filters-btn:hover:not(:disabled) {
   color: var(--foreground);
+}
+
+.clear-filters-btn-disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 /* Members Table */

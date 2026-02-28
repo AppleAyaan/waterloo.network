@@ -218,12 +218,14 @@ export default function SearchableContent({ members, connections }: SearchableCo
                                 </div>
                             </div>
 
-                            {hasActiveFilters && (
-                                <button className="clear-filters-btn" onClick={clearAllFilters}>
-                                    <X size={14} />
-                                    clear all filters
-                                </button>
-                            )}
+                            <button 
+                                className={`clear-filters-btn ${!hasActiveFilters ? 'clear-filters-btn-disabled' : ''}`} 
+                                onClick={clearAllFilters}
+                                disabled={!hasActiveFilters}
+                            >
+                                <X size={14} />
+                                clear all filters
+                            </button>
                         </div>
                     )}
                 </div>
